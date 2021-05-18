@@ -1,0 +1,962 @@
+@font-face { font-family: "ebit"; src: url('https://dl.dropboxusercontent.com/s/n9ry4w2f8tl60t3/8bitoperator.ttf'); }
+@font-face { font-family: "pix"; src: url('https://dl.dropboxusercontent.com/s/68bdyrv4fsayhg8/04B_03__.TTF'); }
+@font-face { font-family: "bit"; src: url('https://dl.dropboxusercontent.com/s/sq28ejp56rarabs/BitxMap%20Font%20tfb.ttf'); }
+ 
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2013 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Canada Type
+ * License URL: http://www.fontspring.com/fflicense/canada-type
+ *
+ *
+ */
+
+
+ @font-face {
+    font-family: 'Gibson';
+    src: url('Gibson-Regular-webfont.eot?3');
+    src: url('Gibson-Regular-webfont.eot?3?#iefix') format('embedded-opentype'),
+         url('Gibson-Regular-webfont.woff?3') format('woff'),
+         url('Gibson-Regular-webfont.ttf?3') format('truetype'),
+         url('Gibson-Regular-webfont.svg?3#GibsonRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track-piece { background-color: transparent; }
+::-webkit-scrollbar-thumb:vertical {
+    width: 4px;
+    background-color:#8a0303;
+    opacity: 0.4;
+}
+ 
+#s-m-t-tooltip {
+    z-index: 1000000000000000000000000000000000000;
+    max-width: 300px;
+    background-color: rgba(80, 112, 134, 0.6);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: ebit;
+    font-size: 8px;
+    padding: 6px 8px;
+    margin: 20px 0 0 20px;
+}
+ 
+body {
+    background-color:#e7defb;
+    background-image: url("https://i.ytimg.com/vi/UNOmaFs6KaY/maxresdefault.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    margin: 0;
+    word-wrap: break-word;
+}
+a { text-decoration:none; }
+ 
+#sbimg1, #sbimg2, #sbimg3, #sbimg4, #sbimg5, #archivepop, #askboxpop, #aboutpop, #blogrollpop, #contentpop {
+    position: fixed;
+    top: 140px;
+    left: 180px;
+    display: block;
+    width: 180px;
+    padding: 20px;
+    background-color: rgba(216, 254, 255,0.2);
+    border: 1px solid rgba(118,191,201,0.2);
+    border-radius: 0 0 8px 8px;
+}
+#sbimg1, #sbimg2, #sbimg3, #sbimg4, #sbimg5 { display: none; }
+#sbimg1 {z-index: 1005;top: 140px; left: 320px;}
+#sbimg2 {z-index: 1004;top: 80px; left: 180px;}
+#sbimg3 {z-index: 1003;top: 100px; left: 250px;}
+#sbimg4 {z-index: 1002;top: 230px; left: 100px;}
+#sbimg5 {z-index: 1001;top: 300px; left: 300px;}
+ 
+.sbimg2, .sbimg3, .sbimg4, .sbimg5 { display: block; }
+ 
+.blogt1, .blogt2, .blogt3, .blogt4, .blogt5, .blogtarchive, .blogtaskbox, .blogtabout, .blogtblogroll, .blogtcontent {
+    font-family: pix;
+    font-size: 8px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding: 10px 21px 8px 21px;
+    width: 180px;
+    position: absolute;
+    background-color: rgba(#8a0303,0.3);
+    text-transform: uppercase;
+    margin: -47px -21px;
+    border-radius: 8px 8px 0 0;
+}
+ 
+.menubtn1, .menubtn2, .menubtn3, .menubtn4, .menubtn5, .menubtnarchive, .menubtnaskbox, .menubtnabout, .menubtnblogroll, .menubtncontent {
+    font-family: pix;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: right;
+    width: 180px;
+    position: absolute;
+    margin-top: -46px;
+    margin-left: 4px;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+ 
+.menubtnarchive, .blogtarchive { width: 580px; }
+.menubtnaskbox, .blogtaskbox { width: 500px; }
+.menubtnabout, .blogtabout { width: 500px; }
+.menubtnblogroll, .blogtblogroll { width: 500px; }
+.menubtncontent, .blogtcontent {
+    width: 680px;
+}
+ 
+.sbimg1, #sbimg1, .menubtn1, .blogt1 {width:200px;}
+.sbimg2, #sbimg2, .menubtn2, .blogt2 {width:00px;}
+.sbimg3, #sbimg3, .menubtn3, .blogt3 {width:250px;}
+.sbimg4, #sbimg4, .menubtn4, .blogt4 {width:250px;}
+.sbimg5, #sbimg5, .menubtn5, .blogt5 {width:250px;}
+ 
+.mbt {
+    color: #ffffff;
+    background-color: rgba(154, 138, 248, 0.205);
+    padding:2px 6px 4px 7px;
+    letter-spacing: 2px;
+    margin-left:1px;}
+ 
+.menubtn1 a, .menubtn2 a, .menubtn3 a, .menubtn4 a, .menubtn5 a, .menubtnarchive a, .menubtnaskbox a, .menubtnabout a, .menubtnblogroll a, .menubtncontent a {
+    color: #ffffff;
+    background-color: rgba(93, 74, 177, 0.2);
+    padding: 2px 6px 4px 7px;
+    letter-spacing: 2px;
+    margin-left: 1px;
+}
+ 
+#taskbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px 0 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10000;
+}
+ 
+.taskbaricon, .taskbariconi {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.8s;
+}
+.taskbaricon {background-color: rgba(255,255,255,0); }
+.tbibg2 {background-color: #8a0303; }
+ 
+#system {width: 40px;}
+ 
+.systempopup {
+    position: absolute;
+    background-color: rgba(103, 162, 155,0.7);
+    font-family: ebit;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    width: 140px;
+    margin: -160px 0;
+    padding: 10px 0;
+    display: none;
+    background-attachment: fixed;
+}
+ 
+.syslink {
+    color: #e0f2f5;
+    padding: 7px 10px;
+    transition: 0.8s;
+}
+ 
+.syslink:hover {
+    color: #ffffff;
+    background-color: rgba(103, 162, 155, 0.6);
+}
+ 
+.sputri {
+    position: absolute;
+    color: rgba(103, 162, 155, 0.7);
+    font-size: 30px;
+    margin-top: -10px;
+    margin-left: 8px;
+}
+ 
+#system, #task {
+    float: left;
+    margin-right: 10px;
+}
+ 
+#task:hover .taskbaricon {
+    background-color: rgba(255,255,255,0.1);
+}
+ 
+#taskbarright {
+    margin-right: 20px;
+    float: right;
+    line-height: 40px;
+    color: #ffffff;
+    height: 40px;
+}
+ 
+#clockbox {
+    text-align: right;
+    font-size: 14px;
+    font-family: ebit;
+    float: left;
+    margin-left: 20px;
+    color: #ffffff;
+}
+ 
+.tbbattery, .tbvolume {float: left;}
+.tbvolume {margin-right: 20px;}
+ 
+.bimh:hover .bimp { opacity: 1; margin: -50px -40px; }
+.bimh:hover .bimptri { opacity: 1; margin-top: -34px; }
+ 
+.bimp {
+    float: left;
+    background-color: #8a0303;
+    position: absolute;
+    margin: -40px -40px;
+    height: 30px;
+    width: 160px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+ 
+.bimptri {
+    color: rgba(#8a0303,0.8);
+    position: absolute;
+    margin-top: -24px;
+    opacity: 0;
+    transition: 0.8s;
+}
+ 
+.muse {margin-top: -10px;padding: 0 10px;}
+ 
+#desktop, #desktop2, #desktop3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+ 
+#desktop2 {left: 100px; }
+#desktop3 { left: 200px; }
+ 
+.shortcut {
+    margin: 8px 0 0 10px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+ 
+.shortcuticon {
+    color:#c4e5ff;
+    font-size: 30px;
+    text-align: center;
+}
+ 
+.shortcuticon a { color: #ffffff; }
+ 
+.shortcutname {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    line-height: 15px;
+    margin-top: 6px;
+}
+ 
+.scn, .senpie {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+.scnbg {
+    padding: 4px 5px 3px 7px;
+    background-color: rgba(255,255,255,0.1);
+}
+ 
+.shortcut:hover {background-color: rgba(#8a0303,0.04);}
+.shortcut:active {background-color: rgba(black,0.1);}
+ 
+.smolsbimg {
+    margin-bottom: -2px;
+    max-height: 40px;
+    max-width: 70px;
+}
+ 
+#archivepop, #askboxpop, #aboutpop, #blogrollpop, #contentpop {
+    width: 580px;
+    height: 400px;
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    z-index: 1100;
+}
+ 
+#askboxpop, #aboutpop, #blogrollpop {
+    width: 500px;
+    height: 200px;
+    top: 130px;
+    left: 530px;
+}
+ 
+#aboutpop { height: 300px; top: 150px; }
+#askboxpop { top: 210px; }
+#blogrollpop { top: 150px; }
+ 
+#askboxpop, #aboutpop, #archivepop, #blogrollpop { display:none; }
+ 
+#aboutwrap, #blogrollwrap {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    background-attachment: fixed;
+    opacity: 0.8;
+    margin: -20px;
+    border-radius: 0 0 8px 8px;
+    background-color: #8a0303;
+    background-image: url();
+    background-size:cover;
+    
+    background-color: #8a0303;
+    background-image: url();
+    background-size: cover;
+}
+ 
+.leftabout {
+    width: 160px;
+    height: 300px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+}
+ 
+.labimgs {
+    padding: 10px 20px 30px 20px;
+}
+ 
+.labimg {
+    width: 120px;
+    height: 120px;
+    display: block;
+    border-radius: 1000px;
+}
+ 
+.aboutinfo {
+    font-family: bit;
+    font-size: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+ 
+.aboutinfo b,strong, .desc b,strong {
+    color: #ffffff bold;
+    font-weight: 400;
+}
+ 
+.rightabout {
+    width: 300px;
+    height: 260px;
+    overflow: auto;
+    margin-left: 200px;
+    position: absolute;
+    z-index: 1;
+    border-left: 1px solid rgba(#ffffff,0.5);
+    margin: 20px 0 20px 180px;
+}
+ 
+.desc {
+    margin: 20px 20px 20px 30px;
+    font-family: bit;
+    font-size: 10px;
+    color: #ffffff;
+}
+ 
+.desc i,em {
+    color: #ffffff italic;
+}
+ 
+.desc a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+ 
+.desc a:hover { color: #ffffff; }
+ 
+#blogrollpop {width:500px;height: 300px;}
+#blogrollwrap {z-index:1;position: absolute;}
+ 
+.followingu {
+    height: 48px;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 215px;
+    background-color: rgba(#8a0303,0.055);
+    padding: 10px;
+    margin: 0 5px 10px 5px;
+}
+.foimg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+}
+.senpai {
+    font-family: ebit;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 12px;
+    color: #ffffff;
+    width: 137px;
+    height: 48px;
+    margin-left: 58px;
+}
+ 
+.kouhai {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: pix;
+    line-height: 8px;
+    margin-top: 2px;
+}
+ 
+#blogrollt {
+    height: 300px;
+    overflow:auto;
+    position: relative;
+    z-index:2;
+}
+ 
+#sticky1, #sticky2, #sticky3 {
+    position: fixed;
+    top: 120px;
+    width: 160px;
+    padding: 10px;
+    background-color: (131, 192, 201, 0.4);
+    color: #ffffff;
+    font-family: ebit;
+    font-size: 9px;
+    letter-spacing: 1px;
+    z-index: 1001;
+}
+ 
+#sticky1 {
+    top: 50px;
+    right: 30px;
+}
+ 
+#sticky2 {
+    top: 170px;
+    right: 30px;
+}
+ 
+#sticky3 {
+    top: 200px;
+    right: 30px;
+}
+ 
+.stickyt1, .stickyt2, .stickyt3 {
+    position: absolute;
+    background-color: rgba(131,192,201,0.6);
+    margin: -34px -10px;
+    padding: 8px 10px;
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    width: 160px;
+    letter-spacing: 1px;
+}
+ 
+.menubtnsticky1, .menubtnsticky2, .menubtnsticky3 {
+    text-align: right;
+    width: 160px;
+    padding: 8px 10px;
+    font-family: pix;
+    position: absolute;
+    margin: -34px -10px;
+    z-index: 1;
+}
+ 
+#sticky1, .stickyt1, .menubtnsticky1 {
+    width:140px;
+}
+#sticky2, .stickyt2, .menubtnsticky2 {
+    width:200px;
+}
+#sticky3, .stickyt3, .menubtnsticky3 {
+    width:200px;
+}
+ 
+#contentpop {
+    top: 90px;
+    left: 350px;
+    position: fixed;
+    z-index: 1000;
+    width: 680px;
+    height: 400px;
+}
+ 
+.contentwrap {
+    width: 680px;
+    height: 400px;
+    padding: 20px;
+    margin: -20px;
+    background-attachment: fixed;
+    opacity: 0.95;
+    position: absolute;
+    border-radius: 0 0 8px 8px;
+    z-index: 0;
+    background-color:#8a0303;
+    background-size:cover;
+}
+ 
+.contentleft {
+    width: 160px;
+    height: 400px;
+    overflow: auto;
+    padding-right: 10px;
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    border-right: 1px solid rgba(118,191,201,0.3);
+}
+ 
+.postnav {
+    font-family: bit;
+    font-size: 10px;
+    color:#ffffff;
+    padding: 3px 10px 6px 10px;
+    transition: 0.8s;
+    width: 140px;
+    height: 14px;
+    line-height: 16px;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+ 
+.postnav:hover {background-color: #8a0303,0.3;}
+.postnav a { color: #ffffff; }
+.posticon {float: left;margin-right: 10px;}
+.pnex {width: 300px;}
+ 
+.currentfolder, .inactivefolder {
+    width: 160px;
+    font-family: bit;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color:black;
+}
+ 
+.inactivefolder a { color: lightblue; }
+ 
+.folderbline {
+    background-color: #8a0303;
+    height: 1px;
+    width: 80px;
+    margin-left: 80px;
+    position: absolute;
+    margin-top: -6px;
+}
+ 
+.totalfoldercount {
+    font-family: pix;
+    font-size: 8px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    margin-top: 10px;
+}
+ 
+#postpop2, #postpop1, #postpop3, #postpop4, #postpop5, #postpop6, #postpop7, #postpop8, #postpop9, #postpop10, #postpop11, #postpop12, #postpop13, #postpop14, #postpop15 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #8a0303;
+    background-image: url({image:wallpaper});
+    background-size:cover;
+    display: none;
+    overflow: auto;
+}
+ 
+.popuppost {
+    z-index: 2;
+    width: 500px;
+    position: relative;
+    padding: 20px;
+    background-color: #8a0303;
+    margin: 40px 0 20px 0;
+}
+ 
+.text {
+    font-family: bit;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.text, .generatorbutton {
+    color: black;
+}
+ 
+.text a, .qsrc a, .asker, #notescon a, #sticky1 a, #sticky2 a, #sticky3 a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+ 
+.text a:hover, .qsrc a:hover, .asker:hover, #notescon a:hover,
+#sticky1 a:hover, #sticky2 a:hover, #sticky3 a:hover {
+    color: #ffffff;
+}
+ 
+.text b,strong, .qsrc b,strong {
+    color: #ffffff, bold;
+}
+ 
+.text i,em, .qsrc i,em {
+    color: #8a0303;
+}
+ 
+.text blockquote {
+    border-left: 1px solid #ffffff;
+    margin: 5px;
+    padding: 0 20px;
+}
+ 
+.itags {
+    font-family: ebit;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 14px 0 4px 0;
+    text-align: center;
+    width: 500px;
+    line-height: 24px;
+}
+ 
+.itags a {
+    color: #ffffff;
+    background-color: rgba(#8a0303,0.055);
+    padding: 4px 10px;
+    transition: 0.4s;
+    margin: 0 4px;
+}
+ 
+.itags a:hover {background-color: rgba(#8a0303,0.3);}
+ 
+.clopo {
+    font-size: 20px;
+    font-family: ebit;
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.4);
+}
+ 
+.permaactions {
+    margin-bottom: 160px;
+    width: 500px;
+    margin-left: 175px;
+}
+ 
+#perbtn:hover { color: #FAF193; border: 2px solid #FAF193; }
+#rbgbtn:hover { color: #90D494; border: 2px solid #90D494; }
+#likbtn:hover { color: #ED7E7E; border: 2px solid #ED7E7E; }
+#perbtn:hover .paction { color: #FAF193; }
+#rbgbtn:hover .paction { color: #90D494; }
+#likbtn:hover .paction { color: #ED7E7E; }
+ 
+.permact {
+    float: left;
+    margin: 0 10px;
+    padding: 4px 10px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: ebit;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+ 
+.paction {
+    margin-right: 6px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 10px;
+}
+ 
+.permact a, .paction a { color: #ffffff; }
+ 
+.lkbtn {
+    float: left;
+    margin-right: 6px;
+    line-height: 10px;
+}
+ 
+.photo img { width: 100%; }
+ 
+.pquote {
+    font-family: ebit;
+    font-size: 16px;
+    color:#ffffff;
+}
+ 
+.qsrc {
+    font-family: pix;
+    font-size: 8px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+ 
+.ptitle {
+    font-family: ebit;
+    font-size: 14px;
+    color:#ffffff;
+}
+ 
+.text ul {list-style-type: square;}
+ 
+.askerportrait {
+    max-width: 64px;
+    max-height: 64px;
+    float: left;
+}
+ 
+.a {
+    margin-left: 60px;
+    padding: 13px 10px;
+    background-color: rgba(#8a0303,0.1);
+    font-family: bit;
+    font-size: 10px;
+    min-height: 14px;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+ 
+.askerm {
+    font-style: italic;
+    padding-right: 3px;
+}
+.asker {
+    padding-left:3px;
+}
+.q {
+    margin-top: 10px;
+}
+.asktri {
+    color: rgba(#8a0303,0.1);
+    font-size: 24px;
+    position: absolute;
+    margin: 2px 43px;
+    transition: 0.6s;
+}
+ 
+.line {
+    padding: 10px;
+    background-color: rgba(#8a0303,0.1);
+    margin-bottom: 6px;
+}
+ 
+.popperma {
+    font-family: ebit;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 20px 0;
+    width: 500px;
+}
+ 
+.permapostinfo {
+    font-family: pix;
+    font-size: 8px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ 
+.permapostinfo a {
+    color: #ffffff;
+}
+
+.permapostinfo a:hover {
+    color: grey;
+}
+ 
+.permapostinfo blockquote {
+    border-left: 1px solid #ffffff;
+    margin: 0 0 5px 15px;
+    padding: 0 0 0 10px;
+}
+ 
+#notescon {
+    width: 400px;
+    font-family: bit;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: left;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+ 
+.notes li {
+    width: 400px;
+    font-family: bit;
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: rgba(skyblue,0.1);
+}
+ 
+.notes img {
+    margin-right: 10px;
+    float: left;
+    width: 13px;
+    height: 13px;
+}
+ 
+ol.notes {
+    width: 400px;
+    list-style-type: none;
+    padding: 10px 20px;
+    line-height: 15px;
+    position: absolute;
+}
+ 
+#contentright {
+    position: absolute;
+    margin-left: 161px;
+    padding: 0 35px;
+    height: 400px;
+    overflow: auto;
+}
+ 
+.post {
+    background-color: rgba(166, 174, 252, 0.1);
+    padding: 20px;
+    float: left;
+    width: 400px;
+    height: 250px;
+    margin: 0 10px 20px 10px;
+    margin-bottom: 20px;
+}
+ 
+.post img {
+    max-width: 40px;
+}
+ 
+.post blockquote img {max-width: 100%;}
+ 
+.postc {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+.postdesci {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    float: right;
+    width: 250px;
+    text-align: right;
+    z-index: 2;
+    margin-top: 230px;
+    overflow: hidden;
+    display: none;
+}
+ 
+.postdescicon {
+    width: 300px;
+    margin-left: -50px;
+    height: 20px;
+    line-height: 20px;
+}
+ 
+.postdesci a, .postdesu a {
+    color: red;
+    background-color: rgba(0.6);
+    padding: 8px 10px;
+}
+ 
+.postdesu {
+    font-family: pix;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 14px;
+}
+ 
+.audem .tumblr_audio_player {
+    height:60px;
+    width:250px;
+    height:60px;
+    width:400px;
+}
+.tumblr_audio_player {width: 500px;}
+ 
+.aline {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: #8a0303;
+    color: #ffffff;
+    font-family: bit;
+    font-size: 12px;
+    overflow: hidden;
+}
+ 
+#opensticky, #closesticky1, #closesticky2, #closesticky3, #closepost1, #closepost2, #closepost3, #closepost4, #closepost5, #closepost6, #closepost7, #closepost8, #closepost9, #closepost10, #closepost11, #closepost12, #closepost13, #closepost14, #closepost5, #closesbimg1, #closesbimg2, #closesbimg3, #closesbimg4, #closesbimg5, #closeaskboxpop, #closearchivepop, #closecontentpop, #closeblogrollpop, #closeaboutpop, .taskbariconi, .shortcut {
+    cursor:url(http://media.tumblr.com/tumblr_m990fidfSA1qid2nw.gif), url(http://media.tumblr.com/tumblr_m990fidfSA1qid2nw.gif), auto;
+    text-decoration: none;
+}
