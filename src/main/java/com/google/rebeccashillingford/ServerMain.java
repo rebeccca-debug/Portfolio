@@ -1,4 +1,5 @@
-package com;
+package com.google.rebeccashillingford;
+
 import java.net.URL;
 import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.server.Server;

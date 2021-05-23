@@ -1,4 +1,4 @@
-package com.servlets;
+package com.google.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
